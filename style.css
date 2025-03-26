@@ -63,6 +63,7 @@ background-color: rgb(137, 6, 185);
 box-shadow: 0 0 25px rgb(137, 6, 185);
 color: white;
 }
+
 .home{
 width: 100%;
 min-height: 100vh;
@@ -89,6 +90,7 @@ margin: 25px 0 30px ;
 .img-box img{
 border-radius: 50%;
 width: 300px;
+
 }
 ::-webkit-scrollbar{
 width: 15px;
@@ -113,72 +115,108 @@ background-image: url(about\ img.jpg);
 background-size: 100%;
 background-repeat: no-repeat;
 }
-.about-img img{
-position: relative;
-width: 300px;
-box-shadow: 0 0 25px rgb(137, 6, 185),
-0 0 50px rgb(137, 6, 185);
-border-radius: 50%;
-}
-.about-content h2{
-text-align: left;
-color: white;
-font-size: 42px;
-}
-.about-content h3{
-font-size: 62px;
-color: white;
-}
-.about-content p{
-color: white;
-font-size: 20px;
-margin: 2em 0 3;
-}
-.about-contact p{
-color: white;
-font-size: center;
-margin: 2em 0 3em;
-}
-.contact-form h2{
-text-align: center;
-margin-top: 3em;
-margin-bottom: 1em;
-font-size: 36px;
-}
-.contact-form form{
-max-width: 50em;
-margin: 1rem auto;
-text-align: center;
-margin-bottom: 3em; 
-}
-.contact form .input-box{
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-}
-.contact-form form .input-box input,
-.contact-form form textarea{
-width: 100%;
-padding: 1.5em;
-font-size: 18px;
-color: black;
-background:rgb(241,241,241) ;
-border-radius: .8rem;
-margin: 1rem 0;
-resize:none ;
+/* About Section */
+#about {
+  padding: 80px 10%;
+  background: url('about-img.jpg') no-repeat center center/cover;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+
+  /* About Section */
+#about {
+  padding: 100px 5%;
+  background: white; /* Ensuring a clean background */
+  text-align: center;
+}
+
+/* Container to center content */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px; /* Prevents text from stretching too wide */
+  margin: auto;
+}
+
+/* Profile Image */
+.about-img img {
+  width: 280px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(137, 6, 185, 0.8);
+  object-fit: cover;
+}
+
+/* About Content */
+.about-content {
+  text-align: center;
+  color: #bd9ae7;
+  margin-top: 20px;
+  max-width: 700px;
+}
+
+.about-content h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #bc7fda;
+}
+
+.about-content h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #bd9ae7;
+}
+
+/* Ensuring the text remains readable and aligned */
+.about-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 0 15px;
+}
+
+/* 🔹 Responsive Design Fix */
+@media (max-width: 1024px) {
+  .about-img img {
+    width: 220px;
+  }
+
+  .about-content h2 {
+    font-size: 28px;
+  }
+
+  .about-content h3 {
+    font-size: 20px;
+  }
+
+  .about-content p {
+    font-size: 16px;
+    text-align: center;
+
+  }
+}
 .footer{
 position: relative;
 bottom: 0;
 width:100%;
 padding: 40px 0;
-background-color: black;
+background-color: rgb(8, 0, 0);
 }
 .footer .social{
 text-align: center;
 padding-bottom: 25px;
-color: white;
+color: rgb(243, 235, 235);
 }
 .footer .social a{
 font-size: 24px;
@@ -228,39 +266,169 @@ padding: 0 15px;
 margin-top: 15px;
 text-align: center;
 font-size: 12px;
-color: white;
+color: rgb(242, 232, 232);
 }
 
+/* General Styles */
 #skills {
-  padding: 40px;
-  background-color: #f9f9f9;
+  text-align: center;
+  padding: 200px 100px;
+  background-color: #eeeaea;
+  min-height: 100vh;
 }
 
 .skills-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .skill-category {
-  width: 45%;
+  background: #520260;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+h2 {
+  font-size: 40px;
   margin-bottom: 20px;
+  color: #32063e;
 }
 
-.skill-category h3 {
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #f3eded;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+li {
+  font-size: 16px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Progress bar styling */
+.progress {
+  width: 100%;
+  height: 10px;
+  background: #e4dfdf;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.bar {
+  height: 100%;
+  background: linear-gradient(90deg, #cab6d7, #a866d1);
+  transition: width 1s ease-in-out;
+}
+
+
+/* Button Styles */
+
+.btn {
+  background-color: #a866d1;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+
+/* Contact Me Section */
+#contact\ me {
+  background: #010115;
+  padding: 50px 20px;
   text-align: center;
-margin-top: 3em;
-margin-bottom: 1em;
-font-size: 36px;
 }
 
-.skill-category ul {
-  list-style-type: none;
-  padding-left: 0;
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  background: #561164;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.skill-category li {
-  font-size: 1.2em;
-  margin-bottom: 5px;
+.contact-me {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #b58cc2;
 }
 
+.contact-me span {
+  color: #ce89db;
+}
+
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.input-box input {
+  width: 48%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none;
+}
+
+.btn-box {
+  margin-top: 20px;
+}
+
+.btn-1 {
+  width: 100%;
+  padding: 12px;
+  background: #bc7fda;
+  border: none;
+  color: rgb(242, 236, 243);
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-1:hover {
+  background: #f2ecf2;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .input-box {
+    flex-direction: column;
+  }
+
+  .input-box input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
