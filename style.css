@@ -109,16 +109,12 @@ justify-content: center;
 align-items: center;
 padding: 12% 8%;
 gap: 10em;
-background-image: url(about\ img.jpg);
-
-
-background-size: 100%;
-background-repeat: no-repeat;
+background-color: black;
 }
 /* About Section */
 #about {
   padding: 80px 10%;
-  background: url('about-img.jpg') no-repeat center center/cover;
+  background-color: black;
 }
 
 .container {
@@ -188,9 +184,7 @@ background-repeat: no-repeat;
 
 /* 🔹 Responsive Design Fix */
 @media (max-width: 1024px) {
-  .about-img img {
-    width: 220px;
-  }
+  
 
   .about-content h2 {
     font-size: 28px;
@@ -235,7 +229,7 @@ transition: 0.3s ease;
 
 .footer .social a:hover{
 transform: scale(1.2)translate(-10px);
-color: rgb(137, 6, 185);
+color: rgb(237, 231, 239);
 border: 2px solid rgb(137, 6, 185);
 }
 .footer ul{
@@ -254,7 +248,7 @@ transition: 0.3s ease;
 }
 
 .footer ul li a:hover{
-border-bottom: 3px solid rgb(137, 6, 185);
+border-bottom: 3px solid rgb(235, 229, 237);
 }
 
 .footer ul li{
@@ -273,7 +267,7 @@ color: rgb(242, 232, 232);
 #skills {
   text-align: center;
   padding: 200px 100px;
-  background-color: #eeeaea;
+  background-color: #0c0000;
   min-height: 100vh;
 }
 
@@ -286,7 +280,7 @@ color: rgb(242, 232, 232);
 }
 
 .skill-category {
-  background: #520260;
+  background: #a748d6;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -296,20 +290,20 @@ color: rgb(242, 232, 232);
 h2 {
   font-size: 40px;
   margin-bottom: 20px;
-  color: #32063e;
+  color: #eadfec;
 }
 
 h3 {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #f3eded;
+  color: #0c0000;
 }
 
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  color: white;
+  color: rgb(10, 0, 0);
 }
 
 li {
@@ -353,7 +347,7 @@ li {
 
 /* Contact Me Section */
 #contact\ me {
-  background: #010115;
+  background: #f9f9fc;
   padding: 50px 20px;
   text-align: center;
 }
@@ -361,7 +355,7 @@ li {
 .contact-form {
   max-width: 600px;
   margin: auto;
-  background: #561164;
+  background: #040005;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -387,7 +381,7 @@ li {
 .input-box input {
   width: 48%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #550765;
   border-radius: 5px;
   font-size: 16px;
 }
@@ -395,7 +389,7 @@ li {
 textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #af5ad5;
   border-radius: 5px;
   font-size: 16px;
   resize: none;
@@ -432,3 +426,56 @@ textarea {
     margin-bottom: 10px;
   }
 }
+
+/* Projects Section Styles */
+.projects {
+  text-align: center;
+  padding: 50px;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+ 
+}
+.projects h1{
+  font-size: 40px;
+}
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 100px;
+}
+
+.project {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project h3 {
+  color: #6a0dad;
+}
+
+.project a {
+  text-decoration: none;
+  color: white;
+  background-color: #6a0dad;
+  padding: 8px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.project a:hover {
+  background-color: #4a0b9d;
+}
+
+
